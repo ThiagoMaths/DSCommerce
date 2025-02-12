@@ -6,7 +6,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 @Entity
-@Table(name="tb_payment")
+@Table(name = "tb_payment")
 public class Payment {
 
     @Id
@@ -22,6 +22,7 @@ public class Payment {
 
     public Payment() {
     }
+
     public Payment(Instant moment, Order order) {
         this.moment = moment;
         this.order = order;
