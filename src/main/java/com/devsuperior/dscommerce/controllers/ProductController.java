@@ -1,9 +1,11 @@
 package com.devsuperior.dscommerce.controllers;
 
+import com.devsuperior.dscommerce.dto.CustomErrorDTO;
 import com.devsuperior.dscommerce.dto.ProductDTO;
 import com.devsuperior.dscommerce.entities.Product;
 import com.devsuperior.dscommerce.repository.ProductRepository;
 import com.devsuperior.dscommerce.services.ProductService;
+import com.devsuperior.dscommerce.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -57,7 +60,6 @@ public class ProductController {
         return ResponseEntity.noContent().build();
 
     }
-
 
 
 }
